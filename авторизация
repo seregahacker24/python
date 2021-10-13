@@ -1,0 +1,19 @@
+print("Введите логин и пароль")
+name = input()
+password = int(input())
+while(password!=57492021):
+    if name=="Тимофей" :
+        print("Неверный пароль от  логина")
+        name = input()
+        password = int(input())
+    elif name!="Тимофей":
+        print("Пароль и логин неверны")
+        name = input()
+        password = int(input())
+while(name!="Тимофей"):
+    if name!="Тимофей" and password==57492021:
+        print("Пароль верен, логин неверен")
+        name = input()
+        password = int(input())
+if name=="Тимофей" and password==57492021:
+    print("Правильны и логин, и пароль")
