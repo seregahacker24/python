@@ -1,0 +1,12 @@
+import pyautogui
+import time
+pyautogui.moveTo(20,110)
+pyautogui.doubleClick()
+time.sleep(1)
+pyautogui.hotkey('win', 'up')
+pyautogui.moveTo(1300,150)
+pyautogui.click()
+pyautogui.write("Windows", interval=0.2)
+pyautogui.moveTo(1000,220)
+time.sleep(1)
+pyautogui.doubleClick()
