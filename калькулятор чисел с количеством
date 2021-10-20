@@ -1,0 +1,8 @@
+print("Введите количество чисел")
+n = int(input())
+s = 0
+print("Введите", n, "чисел")
+for a in range(n):
+    p = int(input())
+    s = s + p
+print("Сумма ваших чисел:", s)
