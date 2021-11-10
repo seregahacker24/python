@@ -1,0 +1,14 @@
+import random
+import keyboard
+import time
+while True:
+    a = random.randint(1,2)
+    b = random.randint(1,2)
+    c = random.randint(1,2)
+    time.sleep(2)
+    print(a, b, c)
+    if keyboard.is_pressed('alt'):
+        time.sleep(2)
+        if a == b and a == c:
+            time.sleep(2)
+            print("ура ты выиграл одно очко")
