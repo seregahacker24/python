@@ -1,0 +1,42 @@
+import random
+import keyboard
+import time
+import pyautogui
+pol = 0
+poker = 0
+while True:
+    a = random.randint(1,2)
+    b = random.randint(1,2)
+    c = random.randint(1,2)
+    print(a, b, c)
+    time.sleep(1)
+    x = input()
+    if x == "q":
+        poker = poker + 1
+        if a == b and a == c:
+            pol = pol + 1
+            print("Баланс", pol)
+        elif a!=b or b!=c or a!=c:
+            pol = pol - 2
+            print("Баланс", pol)
+        print("Ещё", 20 - poker)
+    elif x == "w":
+        poker = poker + 1
+        if a == b and a == c:
+            pol = pol - 2
+            print("Баланс", pol)
+        elif a!=b or b!=c or a!=c:
+            pol = pol + 1
+            print("Баланс", pol)
+        print("Ещё", 20 - poker)
+    else:
+        poker = poker + 1
+        print("Введите q для подтверждения того,"
+              "что все три числа одинаковы и w для подтверждения того,"
+              "что они не одинаковы")
+        pol = pol - 3
+        print("Баланс", pol)
+        print("Ещё", 20 - poker)
+        if poker == 20:
+            break
+            print("Ваш балл", pol)
