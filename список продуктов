@@ -1,0 +1,7 @@
+products=["картошка", "морковка", "редиска"]
+print("Вот ваш список, добавьте ещё два овоща:", products)
+a = input()
+b = input()
+products.append(a)
+products.append(b)
+print("Теперь ваш список полон:", products)
