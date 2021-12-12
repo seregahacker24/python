@@ -1,0 +1,51 @@
+import  time
+print("Привет\nты приехал из другого города в поисках лучшей жизни!\nваш баланс 10000\n")
+balance = 10000
+name = input("Ваше имя: ")
+yr = 1
+a = time.time()
+b = 0
+rab = "безработный"
+while (1==1):
+	print("список команд:\nменю\nбаланс\nпрофиль")
+	choice = input()
+	if choice == "профиль":
+		print(name)
+		print(balance)
+		print(rab)
+		print("lvl", yr)
+	elif choice == "баланс":
+		print("баланс")
+	elif choice == "меню":
+		print("пойти в магазин\nпойти на работу\nпойти на подработку")
+		choice1 = input()
+		if choice == "пойти в магазин":
+			print("хлеб-15\nогурец - 100\nсим карта - 1000")
+			choice2 = input()
+		if choice == "огурец":
+			balance = balance - 100
+		elif choice == "сим-карта":
+			balance = balance - 1000
+		if choice == "пойти на подработку":
+			rab = input("куда пойдем?\nшахта\nферма")
+			yr = yr+2
+			balance = balance + 1000
+			b = time.time()
+		else:
+			print("Ты устал, с работы прошло",time.time()-b)
+			choice = input()
+		if choice == "пойти на работу":
+			print("ДПС\nнужен 10 уровень!")
+		if choice == "дпс":
+		  if yr > 9:
+		  	balance = balance + 3000
+		elif yr < 10:
+			print("ОШИБКА: нужен 10 уровень!Пока что у вас",yr)
+		if choice == "профиль":
+			print(name)
+			print(balance)
+			choice = input()
+			
+		if choice == "баланс":
+			print(balance)
+			choice = input()
