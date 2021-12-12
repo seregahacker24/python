@@ -1,0 +1,16 @@
+import random
+game = ["рыба", "свинина", "яйцо", "говядина", "вода", "кофе", "хлеб", "молоко", "кефир", "картошка", "огурец",
+     "гранат", "курятина", "майонез", "шоколад", "сало", "борщ", "печенье"]
+z = random.randint(0, 17)
+word = game[z]
+print(word)
+new = []
+for a in word:
+    new.append("_")
+print(new)
+while True:
+    letter = input()
+    for a in word:
+        if letter == a:
+             new[a] = letter
+             print(new)
