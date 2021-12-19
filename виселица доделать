@@ -10,7 +10,10 @@ for a in word:
 print(new)
 while True:
     letter = input()
-    for a in word:
-        if letter == a:
+    for a in range(len(word)):
+        if letter == word[a]:
              new[a] = letter
              print(new)
+        newword = 
+        if word == new:
+            print("ghby")
