@@ -1,0 +1,25 @@
+save = [2, 1]
+myLab = [['*','*','*','*','*','*'],
+         ['*','*','*','*','*','*'],
+         ['*','0','*','*','*','*'],
+         ['*','*','*','*','*','*'],
+         ['*','*','*','*','*','*'],
+         ['*','*','*','*','*','*'],]
+while True:
+    k = int(input())
+    l = int(input())
+    if k == 0:
+        k = 1
+    if l == 0:
+        l = 1
+    if k > 6:
+        k = 6
+    if l > 6:
+        l = 6
+    myLab[save[0]][save[1]] = "*"
+    myLab[k-1][l-1] = "0"
+    save = [k-1, l-1]
+    for stroka in myLab:
+        for kletka in stroka:
+            print(kletka + " ", end='')
+        print()
