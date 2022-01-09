@@ -37,6 +37,6 @@ while True:
         pol = pol - 3
         print("Баланс", pol)
         print("Ещё", 20 - poker)
-        if poker == 20:
-            break
-            print("Ваш балл", pol)
+    if poker == 20:
+        print("Ваш балл", pol)
+        break
