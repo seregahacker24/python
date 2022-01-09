@@ -1,0 +1,38 @@
+save = [2, 1]
+k = 3
+l = 2
+myLab = [['*','*','*','*','*','*'],
+         ['*','*','*','*','*','*'],
+         ['*','0','*','*','*','*'],
+         ['*','*','*','*','*','*'],
+         ['*','*','*','*','*','*'],
+         ['*','*','*','*','*','*'],]
+while True:
+    command = input()
+    if command == "вниз":
+        k = k + 1
+    if command == "вверх":
+        k = k - 1
+    if command == "влево":
+        l = l - 1
+    if command == "вправо":
+        l = l + 1
+    if command == "вниз" and k == 7:
+        k = 6
+        print("за пределы нельзя")
+    if command == "вверх" and k == 0:
+        k = 1
+        print("за пределы нельзя")
+    if command == "вправо" and l == 7:
+        l = 6
+        print("за пределы нельзя")
+    if command == "влево" and l == 0:
+        l = 1
+        print("за пределы нельзя")
+    myLab[save[0]][save[1]] = "*"
+    myLab[k-1][l-1] = "0"
+    save = [k-1, l-1]
+    for stroka in myLab:
+        for kletka in stroka:
+            print(kletka + " ", end='')
+        print()
