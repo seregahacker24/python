@@ -1,9 +1,0 @@
-import random
-a = random.randint(100,999)
-b = a // 10
-c = a % 10
-d = b // 10
-e = b % 10
-x = c + d + e
-y = c * d * e
-print(a , x , y)
