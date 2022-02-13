@@ -16,36 +16,35 @@ def generation():
 def proverka1():
     if x == q:
         print("Ура, ты выиграл, тоесть отгадал число")
+        x = 0
     else:
-        print("Неправильное число")
         return x
-def proverka2(ch1, ch2):
-    a = ch1 % 100
-    b = ch1 // 10
+def proverka2():
+    a = q % 100
+    b = q // 10
     c = b % 10 #середина
-    d = ch1 // 100 #начало
+    d = q // 100 #начало
     e = a % 10 #конец
     #другое число
-    a1 = ch2 % 100
-    b1 = ch2 // 10
-    c1 = b % 10 #середина
-    d1 = ch2 // 100 #начало
-    e1 = a % 10 #конец
+    a1 = x % 100
+    b1 = x // 10
+    c1 = b1 % 10 #середина
+    d1 = x // 100 #начало
+    e1 = a1 % 10 #конец
     if d == d1:
         print("Совпала цифра", d, "в начале числа")
-    if c == c1:
+    elif c == c1:
         print("Совпала цифра", c, "в середине числа")
-    if e == e1:
+    elif e == e1:
         print("Совпала цифра", e, "в конце числа")
-    if d == d1 and c == c1:
+    elif d == d1 and c == c1:
         print("Совпали цифры", d, c, "в начале и в середине числа")
-    if d == d1 and e == e1:
+    elif d == d1 and e == e1:
         print("Совпали цифры", d, e, "в начале и в конце числа")
-    if c == c1 and e == e1:
+    elif c == c1 and e == e1:
         print("Совпали цифры", c, e, "в середине и в конце числа")
-    else:
-        print("Неправильное число")
-q = generation
-x = int(input())
-proverka1()
-proverka2(q, x)
+q = generation()
+while True:
+    x = int(input())
+    proverka1()
+    proverka2()
