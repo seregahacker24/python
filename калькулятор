@@ -1,0 +1,18 @@
+plus()
+    x = q + w
+    print(x)
+minus()
+    x = q - w
+    print(x)
+ymnoghenie()
+    x = q * w
+    print(x)
+q = int(input())
+o = input()
+w = int(input())
+if o == "+":
+    plus()
+if o == "-":
+    minus()
+if o == "*":
+    ymnoghenie()
