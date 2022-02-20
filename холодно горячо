@@ -13,13 +13,11 @@ def generation():
             return z
             print(z)
             break
-def proverka1():
+def proverka1(x, q):
     if x == q:
         print("Ура, ты выиграл, тоесть отгадал число")
-        x = 0
-    else:
-        return x
-def proverka2():
+        exit()
+def proverka2(q, x):
     a = q % 100
     b = q // 10
     c = b % 10 #середина
@@ -31,20 +29,27 @@ def proverka2():
     c1 = b1 % 10 #середина
     d1 = x // 100 #начало
     e1 = a1 % 10 #конец
-    if d == d1:
-        print("Совпала цифра", d, "в начале числа")
-    elif c == c1:
-        print("Совпала цифра", c, "в середине числа")
-    elif e == e1:
-        print("Совпала цифра", e, "в конце числа")
-    elif d == d1 and c == c1:
-        print("Совпали цифры", d, c, "в начале и в середине числа")
-    elif d == d1 and e == e1:
-        print("Совпали цифры", d, e, "в начале и в конце числа")
-    elif c == c1 and e == e1:
-        print("Совпали цифры", c, e, "в середине и в конце числа")
+    if (d == d1 and c == c1) or (d == d1 and e == e1) or (c == c1 and e == e1):
+        print("Очень горячо")
+    elif (d == d1) or (c == c1) or (e == e1):
+        print("Горячо")
+def proverka3(q, x):
+    a = q % 100
+    b = q // 10
+    c = b % 10 #середина
+    d = q // 100 #начало
+    e = a % 10 #конец
+    #другое число
+    a1 = x % 100
+    b1 = x // 10
+    c1 = b1 % 10 #середина
+    d1 = x // 100 #начало
+    e1 = a1 % 10 #конец
+    if ((d == c1) or (d == e1)) or ((c == d1) or (c == e1)) or ((e == c1) or (e == d1)):
+        print("Тепло")
 q = generation()
 while True:
     x = int(input())
-    proverka1()
-    proverka2()
+    proverka1(x, q)
+    proverka2(q, x)
+    proverka3(q, x)
