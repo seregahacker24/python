@@ -1,18 +1,23 @@
-plus()
-    x = q + w
-    print(x)
-minus()
-    x = q - w
-    print(x)
-ymnoghenie()
-    x = q * w
-    print(x)
+def plus(q, w):
+    x1 = q + w
+    print(x1)
+def minus(q, w):
+    x2 = q - w
+    print(x2)
+def ymnoghenie(q, w):
+    x3 = q * w
+    print(x3)
+def delenie(q, w):
+    x4 = q / w
+    print(x4)
 q = int(input())
 o = input()
 w = int(input())
 if o == "+":
-    plus()
+    plus(q, w)
 if o == "-":
-    minus()
+    minus(q, w)
 if o == "*":
-    ymnoghenie()
+    ymnoghenie(q, w)
+if o == "/":
+    delenie(q, w)
