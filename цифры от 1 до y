@@ -1,0 +1,6 @@
+def wq(y):
+    if y > 1:
+        wq(y - 1)
+    print(y)
+y = int(input())
+wq(y)
