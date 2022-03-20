@@ -1,0 +1,37 @@
+def vyvodPolya(spisok):
+    for stroka in spisok:
+        for kletka in stroka:
+            print(kletka,end='')
+        print()
+spisok = [["*","*","*"],
+        ["*","*","*"],
+        ["*","*","*"]]
+while True:
+    vyvodPolya(spisok)
+    print("Игрок 1, вы играете за крестик, введите номер строки")
+    player11 = int(input())
+    if player11 > 3:
+        player11 = 3
+    if player11 < 1:
+        player11 = 1
+    print("Теперь введите номер столбца")
+    player12 = int(input())
+    if player12 > 3:
+        player12 = 3
+    if player12 < 1:
+        player12 = 1
+    spisok[player11 - 1][player12 - 1] = "х"
+    #gjffdoskds
+    vyvodPolya(spisok)
+    print("Сейчас ходит игрок 2, за нолик, введите номер строки, а затем столбца")
+    player21 = int(input())
+    if player21 > 3:
+        player21 = 3
+    if player21 < 1:
+        player21 = 1
+    player22 = int(input())
+    if player22 > 3:
+        player22 = 3
+    if player22 < 1:
+        player22 = 1
+    spisok[player21 - 1][player22 - 1] = "о"
