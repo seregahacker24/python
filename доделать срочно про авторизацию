@@ -1,0 +1,30 @@
+textList= []
+while True:
+    print("Введите либо слово регистрация, либо авторизация")
+    q = input()
+    if q == "регистрация":
+        print("Введите логин и пароль")
+        log1 = input()
+        pas1 = int(input())
+        f = open("file.txt", 'w')
+        f.write(str(log1))
+        f.write('\n')
+        f.write(str(pas1))
+        f.close()
+    if q == "авторизация":
+        f = open("file.txt", 'r')
+        textList = f.readlines()
+        print("Введите логин и пароль")
+        log2 = input()
+        pas2 = int(input())
+        #str = str[0:len(str) - 2]
+        text1 = textList[0][:len(textList[0])-1]
+        print(text1)
+        if log2 == text1 and pas2 == textList[1]:
+            print("логин и пароль верны")
+            False
+        else:
+            print("пароль неверный")
+        f.close()
+        #надо убрать  int и убрать всякую фигню
+       
