@@ -32,11 +32,13 @@ def komanda(balans, depress, vremya):
                     if o <= 50 and o > 4:
                         dengi = dengi + 50
                         depress = depress + 1
-                        ##if depress == 10:
-                            ##смерть
+                        if depress == 10:
+                            
                     print("Вы получили " + dengi)
                 print("Вы потратили " + minusbilet + " Прошло 4 часа, на день у вас осталось ещё 8 часов.")
                 balans = balans + dengi
+                f = open('file.txt', 'w')
+                f.write(balans, depress, vremya, day)
             else:
                 print("Неверное значение.")
                 komanda(balans, depress, vremya)
@@ -82,11 +84,12 @@ if q == 0:
     print("Последнее что ты можешь сделать в этой игре, это пойти выпрашивать деньги, это можно делать в самом начале, так как денег у тебя не будет вообще, можно конечно пойти воровать, но выпрашивать безопаснее. Когда ты выпрашиваешь ты сидишь на грязной земле и везде пыль, поэтому ты и твоя одежда становятся грязными.")
     print("На работу ты можешь устроится только на 1 - 5 дней, для того чтобы ты заработал больше желательно чтобы у тебя была чистая одежда и чтобы раньше ты не воровал. Чтобы устроится на работу введите 8, чтобы пойти воровать введите 9, а чтобы выпрашивать деньги введите 10.")
 if q == 1:
-    buhalovka = 0
-    day = 30
-    vremya = 12
-    depress = 0 #если 10 то умирание
-    balans = 0
+    f = open('file.txt', 'r')
+    buhalovka = f.readline(5)
+    day = f.readline(4)
+    vremya = f.readline(3)
+    depress = f.readline(2) #если 10 то умирание
+    balans = f.readline(1)
     while True:
         while vremya > 0:
             komanda(balans, depress,vremya)
