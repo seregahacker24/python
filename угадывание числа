@@ -1,0 +1,10 @@
+import random
+a = -1
+b = random.randint(0,1000)
+while a != b:
+    a = int(input("угадайте число от нуля до тысячи"))
+    if a > b:
+        print("ваше число больше загаданного")
+    else:
+        print("ваше число меньше загаданного")
+print("правильно")
