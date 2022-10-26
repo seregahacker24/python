@@ -1,0 +1,5 @@
+b = 1
+a = int(input("введите число"))
+for f in range(1, a+1):
+    b = b * f
+print("факториал числа", a, "-", b)
