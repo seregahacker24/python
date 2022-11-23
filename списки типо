@@ -1,0 +1,7 @@
+spisok = []
+a = 0
+for i in range(10):
+    spisok.append(int(input()))
+for i in spisok:
+    a = a + i
+print(a)
