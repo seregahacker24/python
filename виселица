@@ -1,19 +1,25 @@
+def faultcounter():
+    if letter != a:
+        fault += 1
+    if fault == 5:
+        new = list(word)
 import random
+print("эта игра про виселицу тут надо вводить слова про еду разную после 5 попыток ты проиграешь")
 game = ["рыба", "свинина", "яйцо", "говядина", "вода", "кофе", "хлеб", "молоко", "кефир", "картошка", "огурец",
      "гранат", "курятина", "майонез", "шоколад", "сало", "борщ", "печенье"]
+fault = 0
 z = random.randint(0, 17)
 word = game[z]
-print(word)
 new = []
+fault = 0
 for a in word:
     new.append("_")
 print(new)
-while True:
+while new != list(word):
     letter = input()
     for a in range(len(word)):
         if letter == word[a]:
-             new[a] = letter
-             print(new)
-        newword = 
-        if word == new:
-            print("ghby")
+            new[a] = letter
+            print(new)
+    faultcounter()
+print("ты проиграл либо выиграл")
