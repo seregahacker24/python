@@ -1,0 +1,16 @@
+import random
+a = [[], [], []]
+c1 = 0
+c2 = 0
+b = random.randint(5, 10)
+for i in range(b):
+    a[random.randint(0, 2)].append(random.randint(-100, 100))
+print("было: ", a)
+for ii in a:
+    for ii2 in a[c1]:
+        if ii2 < 5:
+            a[c1][c2] = 111
+        c2 += 1
+    c1 += 1
+    c2 = 0
+print("стало:", a)
