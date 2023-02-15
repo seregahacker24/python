@@ -10,7 +10,7 @@ for ii in a:
     for ii2 in a[c1]:
         if ii2 < 5:
             a[c1][c2] = 111
-        c2 += 1
-    c1 += 1
+        c2 = c2 + 1
+    c1 = c1 + 1
     c2 = 0
 print("стало:", a)
