@@ -1,4 +1,5 @@
 import random
+spisok = []
 a = []
 w = 0
 c1 = 0
@@ -14,7 +15,8 @@ for ii in a:
     for ii2 in a[c1]:
         w = w + ii2
         c2 = c2 + 1
-    print(w)
+    spisok.append(w)
     w = 0
     c2 = 0
     c1 = c1 + 1
+print(spisok)
