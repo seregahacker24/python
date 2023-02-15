@@ -1,0 +1,20 @@
+import random
+a = []
+w = 0
+c1 = 0
+c2 = 0
+q = random.randint(5, 10)
+for i in range(q):
+    a.append([])
+#####################################
+for i in range(random.randint(10, 25)):
+    a[random.randint(0, len(a) - 1)].append(random.randint(-100, 100))
+print(a,"\nРЕЗУЛЬТАТЫ:")
+for ii in a:
+    for ii2 in a[c1]:
+        w = w + ii2
+        c2 = c2 + 1
+    print(w)
+    w = 0
+    c2 = 0
+    c1 = c1 + 1
