@@ -20,3 +20,9 @@ for ii in a:
     c2 = 0
     c1 = c1 + 1
 print(spisok)
+print(max(spisok))
+index1=0
+for i in range(len(spisok)):
+    if max(spisok) == spisok[i]:
+        index1 = i
+print(a[index1])
