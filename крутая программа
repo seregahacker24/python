@@ -1,0 +1,7 @@
+import random
+a = "qwertyuiopasdfghjkl;zxcvbnm,./1234567890-=\`"
+for i in range(14):
+    ns = random.randint(0, 50)
+    for i2 in range(ns):
+        print(a[random.randint(0, 43)], end = "")
+    print("")
